@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №7</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <ul class="menu">
+                <li class="menu__item">
+                    <a href="#" class="menu__link">Лабораторні роботи</a>
+                    <ul class="submenu">
+                        <li class="submenu__item"><a href="../index.html" class="submenu__link">Лабораторна робота №1</a></li>
+                        <li class="submenu__item"><a href="lab2.html" class="submenu__link">Лабораторна робота №2</a></li>
+                        <li class="submenu__item"><a href="lab3.html" class="submenu__link">Лабораторна робота №3</a></li>
+                        <li class="submenu__item"><a href="lab4.html" class="submenu__link">Лабораторна робота №4</a></li>
+                        <li class="submenu__item"><a href="lab5.html" class="submenu__link">Лабораторна робота №5</a></li>
+                        <li class="submenu__item"><a href="lab6.html" class="submenu__link">Лабораторна робота №6</a></li>
+                        <li class="submenu__item"><a href="#" class="submenu__link submenu__link--active">Лабораторна робота №7</a></li>
+                        <li class="submenu__item"><a href="lab8.html" class="submenu__link">Лабораторна робота №8</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <section class="main">
+            <div class="intro">
+                <div class="intro__container">
+                    <p>київський національний університет ім. Тараса Шевченка</p>
+                    <p>факультет інформаційних технологій</p>
+                    <p>кафедра програмних систем та технологій</p>
+                    <p>Дисципліна</p>
+                    <h1>Функціональне програмування</h1>
+                    <p>Лабораторна робота №7</p>
+                    <p>"Обробка рядків та файлів 
+                        мовами функціонального програмування                        
+                        "</p>
+                    <p>Варіант 15</p>
+                </div>
+                <div class="intro__name">
+                    <p>Виконав: Мухатасов Борис Євгенович</p>
+                    <p>Перевірила: Ніколаєнко Анастасія Юріївна </p>
+                </div>
+            </div>
+            <div class="zm">
+                <h2 class="heading">Зміст</h2>
+                <ul class="nav">
+                    <li class="nav__item"><a href="#meta" class="nav__link">Мета</a></li>
+                    <li class="nav__item"><a href="#task" class="nav__link">Умова задачі</a></li>
+                    <li class="nav__item"><a href="#structure" class="nav__link">Структура програми</a></li>
+                    <li class="nav__item"><a href="#ide" class="nav__link">Обгрунтування вибору середовища та мови функціонального програмування</a></li>
+                    <li class="nav__item"><a href="#code" class="nav__link">Код програми</a></li>
+                    <li class="nav__item"><a href="#links" class="nav__link">Посилання на проект з вихідним кодом</a></li>
+                    <li class="nav__item"><a href="#screen" class="nav__link">Скріншоти результатів</a></li>
+                    <li class="nav__item"><a href="#analys" class="nav__link">Аналіз достовірності результатів</a></li>
+                    <li class="nav__item"><a href="#so" class="nav__link">Висновки</a></li>
+                </ul>
+            </div>
+            <div class="lab">
+                <a id="meta"></a>
+                <h2 class="heading">Мета</h2>
+                <p class="text">Опанувати теоретичні основи обробки рядків та текстових файлів мовами функціонального програмування та розробити програми їх реалізації</p>
+
+                <a id="task"></a>
+                <h2 class="heading">Умови задачі</h2>
+                <p class="text">Записати в текстовий файл n рядків тексту, що задаються програмою на функціональній мові програмування. Зчитати рядки із створеного програмою файлу, вивести їх на екран. Видалити з тексу усі стоп слова. Записати в новий текстовий файл результат обробки тексту.
+                    </p>
+
+                <a id="structure"></a>
+                <h2 class="heading">Структура програми</h2>
+                <div class="struct">
+                    <div class="struct__img-container"><img src="../imgs/hippo_7.png" alt="hipo" class="struct__img"></div>
+                    <div class="struct__text">Рис. 1 - HIPO діаграма до завдання</div>
+                </div>
+
+                <a id="ide"></a>
+                <h2 class="heading">Обгрунтування вибору середовища та мови функціонального програмування</h2>
+                <p class="text">Була обрана мова програмування Scheme, так як вона має легкий, зрозумілий синтаксис, який поюснюють на лекціях, практичних, а також рекомендована лектором. IDE - DrRacket. Головною перевагою для вибору данного середовища розробки є зручність та відсутність потреби у мережі інтернет</p>
+
+
+                <a id="code"></a>
+                <h2 class="heading">Код програми</h2>
+                    <pre>
+
+                        (define start-str "Hello able about above Hello abroad according ")
+
+                        (define N(read))
+                        
+                        ;Запис рядків
+                        (define (_write str port n)
+                          (define res "")
+                          (define (inside i)
+                            (if (< i n)
+                                (begin
+                                (set! res (string-append res str))
+                                (inside (+ i 1)))
+                                (write res port)))
+                          (inside 0))
+                        
+                        ;Ф-я запису у файл
+                        (define (write-to-file path str n)
+                          (define port (open-output-file path))
+                          (_write start-str port n)
+                          (close-output-port port))
+                        
+                        ;Ф-я читання з файлу
+                        (define (read-from-file path)
+                          (define file (open-input-file path))
+                          file
+                          (define temp (read file))
+                          (close-input-port file)
+                          temp)
+                        
+                        ;Ф-я розбивання тексту на слова
+                        (define (to-substring str)
+                          (define res `())
+                          (define temp "")
+                          (define (inside i)
+                            (define symbol "")
+                            (if (>= i (string-length str))
+                                res
+                                (begin
+                                  (set! symbol (substring str i (+ i 1)))
+                                  (if (string=? symbol " ")
+                                      (begin
+                                      (set! res (append res (list temp)))
+                                      (set! temp ""))
+                                      (if (or (string=? symbol ".") (string=? symbol ","))
+                                          (begin
+                                            (set! res (append res (list temp) (list symbol)))
+                                            (set! temp "")
+                                            (set! i (+ i 1)))
+                                          (set! temp (string-append temp symbol))))
+                                  (inside (+ i 1)))))
+                          (inside 0))
+                        
+                        ;Порівняння і видалення слів
+                        (define (comparing lst lst-stop)
+                          (define (inside i j)
+                            (if (>= i (length lst))
+                                lst
+                                (if (>= j (length lst-stop))
+                                    (inside (+ i 1) 0)
+                                    (begin
+                                      (if (string=? (list-ref lst i) (list-ref lst-stop j))
+                                          (begin
+                                          (set! lst (delete lst i))
+                                          (set! i (- i 1))))
+                                          (inside i (+ j 1))))))
+                          (inside 0 0))
+                        
+                        ;Ф-я видалення слова в списку слів
+                        (define (delete lst ind)
+                          (define res `())
+                          (define (inside i)
+                            (if (>= i (length lst))
+                                res
+                                (begin
+                                (if (not(= ind i))
+                                    (set! res (append res (list (list-ref lst i)))))
+                                (inside (+ i 1)))))
+                          (inside 0))
+                        
+                        ;Функція формування строки с списку
+                        (define (list>string lst)
+                          (define res "")
+                          (define (inside i)
+                            (if (>= i (length lst))
+                                res
+                                (begin
+                                    (set! res (string-append res (list-ref lst i) " "))
+                                  (inside (+ i 1)))))
+                          (inside 0))
+                                      
+                                      
+                        
+                        ;Записуємо у файл
+                        (write-to-file "D:\\учеба\\4 курс\\ФП\\Лабы\\files\\output.txt" start-str N)
+                        
+                        ;Читаємо з щойно записаного файлу
+                        (define newstr (read-from-file "D:\\учеба\\4 курс\\ФП\\Лабы\\files\\output.txt"))
+                        newstr
+                        (define newstr-words (to-substring newstr))
+                        newstr-words
+                        ;newstr-words
+                        
+                        ;читаємо словник стоп-слів
+                        (define stop (read-from-file "D:\\учеба\\4 курс\\ФП\\Лабы\\files\\stop-words.txt"))
+                        stop
+                        (define stop-words (to-substring stop))
+                        stop-words
+                        ;stop-words
+                        
+                        (define result (comparing newstr-words stop-words))
+                        (set! result (list>string result))
+                        result
+                        
+                        (write-to-file "D:\\учеба\\4 курс\\ФП\\Лабы\\files\\result.txt" result 1)                        
+                    </pre>
+                
+
+                <a id="links"></a>
+                <h2 class="heading">Посилання на проект з вихідним кодом</h2>
+                <a href="https://github.com/Mubor/Code-from-labworks" class="git">GitHub проект з вихідним кодом до всіх лабораторних</a>
+
+                <a id="screen"></a>
+                <h2 class="heading">Скріншоти результатів</h2>
+                <div class="struct">
+                    <div class="struct__img-container"><img src="../imgs/res_7.1.png" alt="res" class="struct__img"></div>
+                    <div class="struct__text">Рис. 2 - Результат виконання завдання</div>
+                </div>
+                <div class="struct">
+                    <div class="struct__img-container"><img src="../imgs/res_7.2.png" alt="res" class="struct__img"></div>
+                    <div class="struct__text">Рис. 3 - Результат виконання завдання</div>
+                </div>
+
+                <a id="analys"></a>
+                <h2 class="heading">Аналіз достовірності результатів</h2>
+                <div class="text">
+                    <p class="text__item">
+                        Виведення результату співпадає з  умовами задачі, отже все правильно. Всі дані записуються в файли на читаються з них вірно.
+                    </p>
+                </div>
+
+
+                <a id="so"></a>
+                <h2 class="heading">Висновки</h2>
+                <div class="text">В результаті роботи було вирішено два задання за допомогою мови Scheme. Було намальовано HIPO діаграми для кожного з завдань, проведено аналіз достовірності результатів, який показав що результати є вірними. Отримано практичні навички обробки тексту, текстових файлів мовой функціонального програмування.</div>
+
+            </div>
+        </section>
+    </div>
+</body>
+</html>

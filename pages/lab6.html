@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №6</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <ul class="menu">
+                <li class="menu__item">
+                    <a href="#" class="menu__link">Лабораторні роботи</a>
+                    <ul class="submenu">
+                        <li class="submenu__item"><a href="../index.html" class="submenu__link">Лабораторна робота №1</a></li>
+                        <li class="submenu__item"><a href="lab2.html" class="submenu__link">Лабораторна робота №2</a></li>
+                        <li class="submenu__item"><a href="lab3.html" class="submenu__link">Лабораторна робота №3</a></li>
+                        <li class="submenu__item"><a href="lab4.html" class="submenu__link">Лабораторна робота №4</a></li>
+                        <li class="submenu__item"><a href="lab5.html" class="submenu__link">Лабораторна робота №5</a></li>
+                        <li class="submenu__item"><a href="#" class="submenu__link submenu__link--active">Лабораторна робота №6</a></li>
+                        <li class="submenu__item"><a href="lab7.html" class="submenu__link">Лабораторна робота №7</a></li>
+                        <li class="submenu__item"><a href="lab8.html" class="submenu__link">Лабораторна робота №8</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <section class="main">
+            <div class="intro">
+                <div class="intro__container">
+                    <p>київський національний університет ім. Тараса Шевченка</p>
+                    <p>факультет інформаційних технологій</p>
+                    <p>кафедра програмних систем та технологій</p>
+                    <p>Дисципліна</p>
+                    <h1>Функціональне програмування</h1>
+                    <p>Лабораторна робота №6</p>
+                    <p>"Обробка структур типу векторів і матриць, стеків та черг 
+                        мовами функціонального програмування
+                        "</p>
+                    <p>Варіант 15</p>
+                </div>
+                <div class="intro__name">
+                    <p>Виконав: Мухатасов Борис Євгенович</p>
+                    <p>Перевірила: Ніколаєнко Анастасія Юріївна </p>
+                </div>
+            </div>
+            <div class="zm">
+                <h2 class="heading">Зміст</h2>
+                <ul class="nav">
+                    <li class="nav__item"><a href="#meta" class="nav__link">Мета</a></li>
+                    <li class="nav__item"><a href="#task" class="nav__link">Умова задачі</a></li>
+                    <li class="nav__item"><a href="#structure" class="nav__link">Структура програми</a></li>
+                    <li class="nav__item"><a href="#ide" class="nav__link">Обгрунтування вибору середовища та мови функціонального програмування</a></li>
+                    <li class="nav__item"><a href="#code" class="nav__link">Код програми</a></li>
+                    <li class="nav__item"><a href="#links" class="nav__link">Посилання на проект з вихідним кодом</a></li>
+                    <li class="nav__item"><a href="#screen" class="nav__link">Скріншоти результатів</a></li>
+                    <li class="nav__item"><a href="#analys" class="nav__link">Аналіз достовірності результатів</a></li>
+                    <li class="nav__item"><a href="#so" class="nav__link">Висновки</a></li>
+                </ul>
+            </div>
+            <div class="lab">
+                <a id="meta"></a>
+                <h2 class="heading">Мета</h2>
+                <p class="text">Опанувати теоретичні основи обробки структур типу векторів і матриць, стеків та черг мовами функціонального програмування та розробити програми їх реалізації</p>
+
+                <a id="task"></a>
+                <h2 class="heading">Умови задачі</h2>
+                <p class="text">Написати процедури, що обробляють вектори відповідно до правил векторної алгебри з індексацією елементів вектору та прямим доступом до елементів Написати процедури, що обробляють черги відповідно до правил FIFO (перший прийшов — перший пішов) та стеків за правилами LIFO (останній прийшов - перший пішов)
+                    </p>
+                <ul class="task">
+                    <li class="task__item">
+                        <p class="text">Створити вектор чисел. Вивести на екран елементи, які менші за значення максимального і більше за значення мінімального елементів.</p>
+                    </li>
+                    <li class="task__item">
+                        <p class="text">Створити дві черги з різною кількістю елементів. Об’єднати черги, включивши в об’єднану чергу однакову кількість елементів з кожної вхідної черги.</p>
+                    </li>
+                </ul>
+
+                <a id="structure"></a>
+                <h2 class="heading">Структура програми</h2>
+                <div class="struct">
+                    <div class="struct__img-container"><img src="../imgs/hippo_6.1.png" alt="hipo" class="struct__img"></div>
+                    <div class="struct__text">Рис. 1 - HIPO діаграма до завдання №1</div>
+                </div>
+                <div class="struct">
+                    <div class="struct__img-container"><img src="../imgs/hippo_6.2.png" alt="hipo" class="struct__img"></div>
+                    <div class="struct__text">Рис. 2 - HIPO діаграма до завдання №2</div>
+                </div>
+
+                <a id="ide"></a>
+                <h2 class="heading">Обгрунтування вибору середовища та мови функціонального програмування</h2>
+                <p class="text">Була обрана мова програмування Scheme, так як вона має легкий, зрозумілий синтаксис, який поюснюють на лекціях, практичних, а також рекомендована лектором. IDE - DrRacket. Головною перевагою для вибору данного середовища розробки є зручність та відсутність потреби у мережі інтернет</p>
+
+
+                <a id="code"></a>
+                <h2 class="heading">Код програми</h2>
+                    <pre>
+                        (#%require (only racket/base random))
+
+(define (minx vect)
+  (define ind 0)
+  (define (inside i)
+    (if (>= i (vector-length vect))
+        (vector-ref vect ind)
+        (begin
+        (if (< (vector-ref vect i) (vector-ref vect ind))
+               (set! ind i))
+        (inside (+ i 1)))))
+  (inside 0))
+
+(define (maxx vect)
+  (define ind 0)
+  (define (inside i)
+    (if (>= i (vector-length vect))
+        (vector-ref vect ind)
+        (begin
+        (if (> (vector-ref vect i) (vector-ref vect ind))
+               (set! ind i))
+        (inside (+ i 1)))))
+  (inside 0))
+
+(define (output vect)
+  (define mi (minx vect))
+  (define ma (maxx vect))
+  (define (inside i)
+    (if (< i (vector-length vect))
+        (begin
+        (if (and(> (vector-ref vect i) mi) (< (vector-ref vect i) ma))
+            (begin
+              (display (vector-ref vect i))
+              (display " ")))
+               
+        (inside (+ i 1)))))
+  (inside 0))
+
+(define (create_vect n)
+  (define res `())
+  (define (inside i)
+    (if (>= i n)
+        (list->vector res)
+        (begin
+          (set! res (append res (list(random 100))))
+          (inside (+ i 1)))))
+  (inside 0))
+
+(define v (create_vect 10))
+(display "Створений вектор ")
+v
+(display "Виведення проміжку між максимальним та мынымальним елементом ")
+(output v)
+;............................................................15.2.........................................................
+(newline)
+(define (front q) (car q)) 
+(define (rear q)(cdr q))
+
+
+(define (make-queue)
+ (define p (cons `()`() ))
+ (cons p p))
+
+(define (null-queue? q)(and(eq? (front q) (rear q)) (eq? (car (front q)) '() )))
+
+(define (push q e)
+ (define p (cons e '()))
+ (if (null-queue? q)
+  (begin (set-car! q p)
+   (set-cdr! q p)
+  )
+  (begin
+   (set-cdr! (rear q) p)
+   (set-cdr! q p)
+  ) ) )
+
+
+
+(define (create_queue n nmax)
+  (define res (make-queue))
+  (define (inside i)
+    (if (>= i nmax)
+        res
+        (begin
+          (push res i)
+          (inside (+ i 1)))))
+  (inside n))
+
+(define (fill_queue lst)
+  (define res (make-queue))
+  (define (inside i)
+    (if (>= i (length lst))
+            res
+        (begin
+          (push res (list-ref lst i))
+          (inside (+ i 1)))))
+  (inside 0))
+
+(define (merge q1 q2 n)
+  (define res `())
+  (define temp1 (front q1))
+  (define temp2 (front q2))
+  (define (inside i q)
+    (if (< i n)
+        (begin
+        (set! res (append res (list(list-ref q i))))
+        (inside (+ i 1) q))))
+  (inside 0 temp1)
+  (inside 0 temp2)
+  (fill_queue res))
+
+(define q1 (create_queue 5 10))
+(define q2 (create_queue 11 17 ))
+
+(display "Перша черга ")
+q1
+(display "Друга черга ")
+q2
+(display "Об'єднана черга ")
+(merge q1 q2 5)
+                    </pre>
+                
+
+                <a id="links"></a>
+                <h2 class="heading">Посилання на проект з вихідним кодом</h2>
+                <a href="https://github.com/Mubor/Code-from-labworks" class="git">GitHub проект з вихідним кодом до всіх лабораторних</a>
+
+                <a id="screen"></a>
+                <h2 class="heading">Скріншоти результатів</h2>
+                <div class="struct">
+                    <div class="struct__img-container"><img src="../imgs/res_6.png" alt="res" class="struct__img"></div>
+                    <div class="struct__text">Рис. 3 - Результат виконання завдання</div>
+                </div>
+
+                <a id="analys"></a>
+                <h2 class="heading">Аналіз достовірності результатів</h2>
+                <div class="text">
+                    <p class="text__item">
+                        Виведення результату співпадає з  умовами задачі, отже все правильно.
+                    </p>
+                </div>
+
+
+                <a id="so"></a>
+                <h2 class="heading">Висновки</h2>
+                <div class="text">В результаті роботи було вирішено два задання за допомогою мови Scheme. Було намальовано HIPO діаграми для кожного з завдань, проведено аналіз достовірності результатів, який показав що результати є вірними. Також вивчено стеки та вектори у функціональних мовах програмування, їх застосування та обробка.</div>
+
+            </div>
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №5</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <ul class="menu">
+                <li class="menu__item">
+                    <a href="#" class="menu__link">Лабораторні роботи</a>
+                    <ul class="submenu">
+                        <li class="submenu__item"><a href="../index.html" class="submenu__link">Лабораторна робота №1</a></li>
+                        <li class="submenu__item"><a href="lab2.html" class="submenu__link">Лабораторна робота №2</a></li>
+                        <li class="submenu__item"><a href="lab3.html" class="submenu__link">Лабораторна робота №3</a></li>
+                        <li class="submenu__item"><a href="lab4.html" class="submenu__link">Лабораторна робота №4</a></li>
+                        <li class="submenu__item"><a href="#" class="submenu__link submenu__link--active">Лабораторна робота №5</a></li>
+                        <li class="submenu__item"><a href="lab6.html" class="submenu__link">Лабораторна робота №6</a></li>
+                        <li class="submenu__item"><a href="lab7.html" class="submenu__link">Лабораторна робота №7</a></li>
+                        <li class="submenu__item"><a href="lab8.html" class="submenu__link">Лабораторна робота №8</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <section class="main">
+            <div class="intro">
+                <div class="intro__container">
+                    <p>київський національний університет ім. Тараса Шевченка</p>
+                    <p>факультет інформаційних технологій</p>
+                    <p>кафедра програмних систем та технологій</p>
+                    <p>Дисципліна</p>
+                    <h1>Функціональне програмування</h1>
+                    <p>Лабораторна робота №5</p>
+                    <p>"Обробка раціональних та комплексних чисел 
+                        мовами функціонального програмування"</p>
+                    <p>Варіант 15</p>
+                </div>
+                <div class="intro__name">
+                    <p>Виконав: Мухатасов Борис Євгенович</p>
+                    <p>Перевірила: Ніколаєнко Анастасія Юріївна </p>
+                </div>
+            </div>
+            <div class="zm">
+                <h2 class="heading">Зміст</h2>
+                <ul class="nav">
+                    <li class="nav__item"><a href="#meta" class="nav__link">Мета</a></li>
+                    <li class="nav__item"><a href="#task" class="nav__link">Умова задачі</a></li>
+                    <li class="nav__item"><a href="#structure" class="nav__link">Структура програми</a></li>
+                    <li class="nav__item"><a href="#ide" class="nav__link">Обгрунтування вибору середовища та мови функціонального програмування</a></li>
+                    <li class="nav__item"><a href="#code" class="nav__link">Код програми</a></li>
+                    <li class="nav__item"><a href="#links" class="nav__link">Посилання на проект з вихідним кодом</a></li>
+                    <li class="nav__item"><a href="#screen" class="nav__link">Скріншоти результатів</a></li>
+                    <li class="nav__item"><a href="#analys" class="nav__link">Аналіз достовірності результатів</a></li>
+                    <li class="nav__item"><a href="#so" class="nav__link">Висновки</a></li>
+                </ul>
+            </div>
+            <div class="lab">
+                <a id="meta"></a>
+                <h2 class="heading">Мета</h2>
+                <p class="text">Опанувати технологію абстракції даних в мовах функціонального програмування. Реалізувати програму обробки раціональних та комплексних чисел мовами функціонального програмування, представивши ці числа конструкціями типу «пара»</p>
+
+                <a id="task"></a>
+                <h2 class="heading">Умови задачі</h2>
+                <ul class="task">
+                    <li class="task__item">
+                        <p class="text">Розв’язати ціле раціональне рівняння  , виконавши операції визначення найменшого спільного знаменника дробив, приведення рівняння до спільного знаменника, пошуку кореня в перетвореному рівнянні</p>
+                    </li>
+                    <li class="task__item">
+                        <p class="text">Створити список цілих додатних і від’ємних чисел, з кожної пари яких побудувати комплексні числа у тригонометричній формі і записати їх до нового списку. Тригонометрична форма комплексного числа задається модулем z і аргументом.</p>
+                    </li>
+                </ul>
+
+                <a id="structure"></a>
+                <h2 class="heading">Структура програми</h2>
+                <div class="struct">
+                    <div class="struct__img-container"><img src="../imgs/hippo_5.1.png" alt="hipo" class="struct__img"></div>
+                    <div class="struct__text">Рис. 1 - HIPO діаграма до завдання №1</div>
+                </div>
+                <div class="struct">
+                    <div class="struct__img-container"><img src="../imgs/hippo_5.2.png" alt="hipo" class="struct__img"></div>
+                    <div class="struct__text">Рис. 2 - HIPO діаграма до завдання №2</div>
+                </div>
+
+                <a id="ide"></a>
+                <h2 class="heading">Обгрунтування вибору середовища та мови функціонального програмування</h2>
+                <p class="text">Була обрана мова програмування Scheme, так як вона має легкий, зрозумілий синтаксис, який поюснюють на лекціях, практичних, а також рекомендована лектором. IDE - DrRacket. Головною перевагою для вибору данного середовища розробки є зручність та відсутність потреби у мережі інтернет</p>
+
+
+                <a id="code"></a>
+                <h2 class="heading">Код програми</h2>
+                    <pre>
+                        ;............................................(15.1)...........................................................
+                        (define (numer x) (car x))
+                        (define (denom x) (cdr x))
+                        (define (create n d) (cons n d))
+                        
+                        (define (print f sign)
+                          (display (numer f))
+                          (display sign)
+                          (display (denom f)))
+                        
+                        (define (printeq f1 f2 f3 sign)
+                          (print f1 sign)
+                          (display " + ")
+                          (print f2 sign)
+                          (display " = ")
+                          (print f3 sign))
+                        
+                        (define (nok a b c)
+                          (define temp (/ (* a b) (gcd a b)))
+                            (/ (* temp c) (gcd temp c)))
+                        
+                        ;створюємо дроби
+                        (define fract1 (create (cons "x" -1)  2))
+                        (define fract2 (create (cons 2 "x")  3))
+                        (define fract3 (create (cons 5 "x")  6))
+                        
+                        ;запис рівняння
+                        (printeq fract1 fract2 fract3 "/")
+                        
+                        (newline)
+                        ; спыльний знаменник
+                        (define mn (nok (denom fract1) (denom fract2) (denom fract3)))
+                        
+                        ;домножуємо
+                        
+                        (set! fract1 (create (cons (cons mn (car (numer fract1))) (* mn (cdr (numer fract1)))) (denom fract1)))
+                        (set! fract2 (create (cons (* mn (car (numer fract2))) (cdr (numer fract2))) (denom fract2)))
+                        (set! fract3 (create (cons (* mn (car (numer fract3))) (cdr (numer fract3))) (denom fract3)))
+                        
+                        ;дылимо на знаменник
+                        
+                        (set! fract1 (cons (cons (/ (car ( car (numer fract1))) (denom fract1)) (cdr (car (numer fract1)))) (/ (cdr fract1) (denom fract1))))
+                        
+                        fract1
+                        
+                        (set! fract1 (cons (- (+ 3 4) 5) "x"))
+                        
+                        (newline)
+                        (display fract1)
+                        (display "= 3")
+                        
+                        (newline)
+                        (display "x = ")
+                        (display (/ 3 (car fract1)))
+                        ;........................................................................(15.2)...................................................................
+                        
+                        (newline)
+                        (define (create_list x xmax);створення списку чисел
+                          (define res `())
+                          (define (inside i res)
+                            (if (> i xmax)
+                                res
+                                (if (= i 0)
+                                    (inside (+ i 1) res)
+                                    (inside (+ i 1) (append res (list i))))))
+                          (inside x res))
+                        
+                        ;-------------------------------------------------------------------------------------------
+                        (define (create_pair_for_one lst ind);створення пар для одного числа
+                          (define res `())
+                          (define (inside i res)   
+                            (if (>= i (length lst))
+                                res
+                                (inside (+ i 1) (append res (list(cons (list-ref lst ind) (list-ref lst i)))))))
+                          (inside 0 res))
+                        ;------------------------------------------------------------------------------------------
+                        
+                        (define (create_pairs lst);створення пар
+                          (define res `())
+                          (define (inside i res)   
+                            (if (>= i (length lst))
+                                res
+                                (inside (+ i 1) (append res (create_pair_for_one lst i)))))
+                          (inside 0 res))
+                        
+                        ;-------------------------------------------------------------------------------------------
+                        (define (anum x) (car (list-ref sample x)))
+                        (define (bnum x) (cdr (list-ref sample x)))
+                        
+                        (define (r a b) (round(sqrt (+ (* a a) (* b b)))))
+                        (define (fi a b) (atan (/ b a)))
+                        
+                        ;-----------------------------------------------------------------------------------------------
+                        
+                        
+                        (define (to_fract p) ; приведення пари з п до дробу
+                          (string-append (car p) "/" (number->string (cdr p))))
+                        
+                        ;---------------------------------------------------------------------------------------------
+                        
+                        (define (to_pi angle);приведення куту до пари з П
+                          (define f (create (round angle) 180))
+                          f
+                          (define temp (make-rat (numer f) (denom f)))
+                          (define res (create (string-append (number->string (numer temp)) "П") (denom temp)))
+                          res)
+                        
+                        ;--------------------------------------------------------------------------------------------
+                        
+                        (define (to_angle radian) (* radian (/ 180 pi)));переведення радіанів у кути
+                        ;-----------------------------------------------------------------------------------------------------
+                        
+                        (define (make-rat n d);скорочення дробу
+                            (let ((nod (gcd n d)))
+                                 (cons (/ n nod) (/ d nod))))
+                        
+                        ;------------------------------------------------------------------------
+                        (define pi 3.1416)
+                        (define nums (create_list -3 3))
+                        (define sample (create_pairs nums))
+                        
+                        (define (str r fi);формування запису
+                          (set! r (number->string r))
+                          (string-append "z = " r "(cos(" fi ") + i * sin(" fi "))"))
+                        
+                        
+                        (define (find_sol)
+                          (define res `())
+                          (define (inside i)
+                            (if (>= i (length sample))
+                                res
+                                (begin
+                                  (set! res (append res (list(str (r (anum i)(bnum i)) (to_fract(to_pi(to_angle (fi (anum i)(bnum i)))))))))
+                                  (inside (+ i 1)))))
+                            (inside 0))
+                        
+                        (find_sol)
+                           
+                    </pre>
+                
+
+                <a id="links"></a>
+                <h2 class="heading">Посилання на проект з вихідним кодом</h2>
+                <a href="https://github.com/Mubor/Code-from-labworks" class="git">GitHub проект з вихідним кодом до всіх лабораторних</a>
+
+                <a id="screen"></a>
+                <h2 class="heading">Скріншоти результатів</h2>
+                <div class="struct">
+                    <div class="struct__img-container"><img src="../imgs/res_5.png" alt="res" class="struct__img"></div>
+                    <div class="struct__text">Рис. 3 - Результат виконання завдання</div>
+                </div>
+
+                <a id="analys"></a>
+                <h2 class="heading">Аналіз достовірності результатів</h2>
+                <div class="text">
+                    <p class="text__item">
+                        Перше завдання вірно віришує рівняння, оскільки співпало з результатом у онлайн калькуляторі.
+                    </p>
+                    <p class="text__img">
+                        <img src="../imgs/5.1_an.png" alt="res" class="res">
+                    </p>
+                    <p class="text__item">Розберемо друге завдання за умови пари чисел a,b = -3 (перший запис результату). Тригонометричкий запис комплексних чисел має наступний вигляд:</p>
+                    <p class="text__img">
+                        <img src="../imgs/5.2_an.png" alt="res" class="res">
+                    </p>
+                    <p class="text__item">
+                        Отже, задача полягає в тому, щоб знайти r, та число fi. fi находиться як арктангенс b поділене на а. Результат:
+                    </p>
+                    <p class="text__img">
+                        <img src="../imgs/5.3_an.png" alt="res" class="res">
+                    </p>
+                    <p class="text__item">
+                        Результат переводимо у градуси та отримуємо значення pi, що міститься у результаті (з похибкою, оскільки дані округлялись).
+                    </p>
+                    <p class="text__item">
+                        Знаходимо r і бачимо що результат приблизно співпадає
+                    </p>
+                    <p class="text__img">
+                        <img src="../imgs/5.4_an.jpg" alt="res" class="res" width="15%">
+                    </p>
+                </div>
+
+
+                <a id="so"></a>
+                <h2 class="heading">Висновки</h2>
+                <div class="text">В результаті роботи було вирішено два задання за допомогою мови Scheme. Було намальовано HIPO діаграми для кожного з завдань, проведено аналіз достовірності результатів, який показав що результати є вірними. </div>
+
+            </div>
+        </section>
+    </div>
+</body>
+</html>

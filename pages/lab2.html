@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №2</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <ul class="menu">
+                <li class="menu__item">
+                    <a href="#" class="menu__link">Лабораторні роботи</a>
+                    <ul class="submenu">
+                        <li class="submenu__item"><a href="../index.html" class="submenu__link">Лабораторна робота №1</a></li>
+                        <li class="submenu__item"><a href="#" class="submenu__link submenu__link--active">Лабораторна робота №2</a></li>
+                        <li class="submenu__item"><a href="lab3.html" class="submenu__link">Лабораторна робота №3</a></li>
+                        <li class="submenu__item"><a href="lab4.html" class="submenu__link">Лабораторна робота №4</a></li>
+                        <li class="submenu__item"><a href="lab5.html" class="submenu__link">Лабораторна робота №5</a></li>
+                        <li class="submenu__item"><a href="lab6.html" class="submenu__link">Лабораторна робота №6</a></li>
+                        <li class="submenu__item"><a href="lab7.html" class="submenu__link">Лабораторна робота №7</a></li>
+                        <li class="submenu__item"><a href="lab8.html" class="submenu__link">Лабораторна робота №8</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <section class="main">
+            <div class="intro">
+                <div class="intro__container">
+                    <p>київський національний університет ім. Тараса Шевченка</p>
+                    <p>факультет інформаційних технологій</p>
+                    <p>кафедра програмних систем та технологій</p>
+                    <p>Дисципліна</p>
+                    <h1>Функціональне програмування</h1>
+                    <p>Лабораторна робота №2</p>
+                    <p>"Рекурентні співвідношення для тригонометричних, експоненціальних функцій та ланцюгові дроби"</p>
+                    <p>Варіант 15</p>
+                </div>
+                <div class="intro__name">
+                    <p>Виконав: Мухатасов Борис Євгенович</p>
+                    <p>Перевірила: Ніколаєнко Анастасія Юріївна </p>
+                </div>
+            </div>
+            <div class="zm">
+                <h2 class="heading">Зміст</h2>
+                <ul class="nav">
+                    <li class="nav__item"><a href="#meta" class="nav__link">Мета</a></li>
+                    <li class="nav__item"><a href="#task" class="nav__link">Умова задачі</a></li>
+                    <li class="nav__item"><a href="#structure" class="nav__link">Структура програми</a></li>
+                    <li class="nav__item"><a href="#ide" class="nav__link">Обгрунтування вибору середовища та мови функціонального програмування</a></li>
+                    <li class="nav__item"><a href="#code" class="nav__link">Код програми</a></li>
+                    <li class="nav__item"><a href="#links" class="nav__link">Посилання на проект з вихідним кодом</a></li>
+                    <li class="nav__item"><a href="#screen" class="nav__link">Скріншоти результатів</a></li>
+                    <li class="nav__item"><a href="#analys" class="nav__link">Аналіз достовірності результатів</a></li>
+                    <li class="nav__item"><a href="#so" class="nav__link">Висновки</a></li>
+                </ul>
+            </div>
+            <div class="lab">
+                <a id="meta"></a>
+                <h2 class="heading">Мета</h2>
+                <p class="text">Опанувати теоретичні основи застосування рекурентних співвідношень для обчислення тригонометричних, експоненціальних, степеневих функцій та розробити програми функціональними мовам програмування для обчислення їх значень.</p>
+
+                <a id="task"></a>
+                <h2 class="heading">Умови задачі</h2>
+                <p class="text">Написати процедури, що обчислюють задану функцію за допомогою рекурентних послідовностей, розвинувши її у ряд Маклорена (абоТейлора).</p>
+                <ul class="task">
+                    <li class="task__item">
+                        <p class="text">Обчислити значення функції у, розвинувши функцію sin(x) у ряд Тейлора. Аргумент х змінюється від -2 до 2 з кроком 0.5. Визначити </p>
+                        <p class="text__img"><img src="../imgs/task_2.png" alt="task"></p>
+                    </li>
+                    <li class="task__item">
+                        <p class="text">Учасники лижних змагань стартують з інтервалом 30 секунд. Щоб визначити порядок старту, спортсмени тягнуть жереб, який вказує номер старту. Визначити кількість різних послідовностей виходу лижників на старт, якщо в змаганнях брало участь n осіб. Через який проміжок часу всі спортсмени будуть на лижах? Значення кількості спортсменів n вводити з клавіатури.</p>
+                    </li>
+                </ul>
+
+                <a id="structure"></a>
+                <h2 class="heading">Структура програми</h2>
+                <div class="struct">
+                    <div class="struct__img-container"><img src="../imgs/hippo_2.1.png" alt="hipo" class="struct__img"></div>
+                    <div class="struct__text">Рис. 1 - HIPO діаграма до завдання №1</div>
+                </div>
+                <div class="struct">
+                    <div class="struct__img-container"><img src="../imgs/hippo_2.2.png" alt="hipo" class="struct__img"></div>
+                    <div class="struct__text">Рис. 2 - HIPO діаграма до завдання №2</div>
+                </div>
+
+                <a id="ide"></a>
+                <h2 class="heading">Обгрунтування вибору середовища та мови функціонального програмування</h2>
+                <p class="text">Була обрана мова програмування Scheme, так як вона має легкий, зрозумілий синтаксис, який поюснюють на лекціях, практичних, а також рекомендована лектором. IDE - DrRacket. Головною перевагою для вибору данного середовища розробки є зручність та відсутність потреби у мережі інтернет</p>
+
+
+                <a id="code"></a>
+                <h2 class="heading">Код програми</h2>
+                    <pre>
+                        (define (factorial num);зовнішня ф-я знаходження факторіала
+(define (fac num result); внутрішня ф-я факторіала
+  (if (= num 0);якщо число стає нулем то повертаємо результат
+       result
+      (fac (- num 1) (* num result))));якщо ні,то викликаємо нову ітерацію функції
+  (fac num 1)); виклик зовнівньої ф-ї
+
+;----------------------------------------------------------------------------------------------------
+
+(define (pow x y); зовнішня ф-я обрахування х в степені у
+  (define (pow_inside x y res);внутрішня ф-я обрахування х в степені у
+    (if (= y 1); якщо у=1, тобто всі ітерації зроблені, то повертаємо результат
+        res
+        (pow_inside x (- y 1) (* res x))));викликаемо нову ітерацію
+  (pow_inside x y x))
+
+;-----------------------------------------------------------------------------------------------------
+
+(define (absx num);модуль числа
+  (if (< num 0)
+      (* num -1)
+      num))
+
+;-----------------------------------------------------------------------------------------------------
+(define (sinus x);зовнішня ф-я обрахунку синуса розкладаннямна ряд тейлора
+  (define (sins x res step);внутрішня ф-я обрахунку синуса розкладаннямна ряд тейлора
+    (if (< (absx (/ (pow x (- (* 2 step) 1)) (factorial step))) 0.000001);Перевірка досяжності необхыдної точності
+        res
+        
+        (sins x (+ res (* (pow -1 step) (/ (pow x (+ (* 2 step) 1)) (factorial (+ (* 2 step) 1))))) (+ step 1))))
+        
+   (sins x x 1)
+    )
+
+;----------------------------------------------------------------------------------
+
+(display "15.1\n")
+
+(define (own_solution x)
+    (if (and (< 0 x) (< x 1));якщо х підпадає під першу умову
+         (- (sinus x) (sinus (/ x 2)))
+         
+        (if (and (<= -2 x) (<= x 0));якщо х підпадає під другу умову
+              (- (pow (sinus x) 3) (sinus (+ x 0.125))))))
+
+;-----------------------------------------------------------------------------------
+
+(define (racket_solution x);перевірка правильності результату за допомогою влаштованої ф-ї обрахування синусу
+  (if (and (< 0 x) (< x 1));якщо х підпадає під першу умову
+         (- (sin x) (sin (/ x 2)))
+         
+        (if (and (<= -2 x) (<= x 0));якщо х підпадає під другу умову
+              (- (pow (sin x) 3) (sin (+ x 0.125))))))
+  
+;-----------------------------------------------------------------------------------
+
+(define (task_1 x)
+  (define step_row (list x))
+
+  (if (< x 1)
+
+      (begin
+          (display (list x (own_solution x) (racket_solution x) (- (own_solution x) (racket_solution x))))
+          (display "\n")
+        (task_1 (+ x 0.5))
+        )))
+
+;------------------------------------------------------------------------------------
+
+(display "   X      Власна ф-я        Вбудована ф-я          Похибка\n")
+(task_1 -2)
+
+;------------------------------------------------------------------------------------
+
+(display "15.2\n\n")
+(display "Введіть кількість учасників: ")
+(define n(read));кількість учасників змагань
+(display "\n")
+
+(display(factorial n)); обраховуемо кількість послідовностей
+(display "\n")
+
+(display (/ (* n 30) 60)); знаходимо час у хвилинах, через який всі спортсмени будуть на лижах
+(display " min")
+(display "\n")
+
+
+
+                    </pre>
+                
+
+                <a id="links"></a>
+                <h2 class="heading">Посилання на проект з вихідним кодом</h2>
+                <a href="https://github.com/Mubor/Code-from-labworks" class="git">GitHub проект з вихідним кодом до всіх лабораторних</a>
+
+
+                <a id="screen"></a>
+                <h2 class="heading">Скріншоти результатів</h2>
+                <div class="struct">
+                    <div class="struct__img-container"><img src="../imgs/res_2.png" alt="res" class="struct struct_img"></div>
+                    <div class="struct__text">Рис. 3 - Результат виконання завдання</div>
+                </div>
+
+                <a id="analys"></a>
+                <h2 class="heading">Аналіз достовірності результатів</h2>
+                <div class="text">
+                    <p class="text__item">
+                        З скріншоту результатів видно, що обраховані рядом тейлора значення синуса співпадають з значеннями, обрахованими вбудованою функцією, з деякою похибкою, отже результат вірний
+                    </p>
+                    <p class="text__item">
+                        Для рішення завдання, потрібно було знайти к-ть перестановок P. Його знайдено програмою вірно, оскільки результат спіпадає з  квлькулятором
+                    </p>
+                    <p class="text__img">
+                        <img src="../imgs/2_an.jpg" alt="res" class="res" width="15%">
+                    </p>
+                </div>
+
+
+                <a id="so"></a>
+                <h2 class="heading">Висновки</h2>
+                <div class="text">В результаті роботи було вирішено два задання за допомогою мови Scheme. Було намальовано HIPO діаграми для кожного з завдань, проведено аналіз достовірності результатів, який показав що результати є вірними.</div>
+
+            </div>
+        </section>
+    </div>
+</body>
+</html>

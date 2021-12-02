@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №1</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <ul class="menu">
+                <li class="menu__item">
+                    <a href="#" class="menu__link">Лабораторні роботи</a>
+                    <ul class="submenu">
+                        <li class="submenu__item"><a href="#" class="submenu__link submenu__link--active">Лабораторна робота №1</a></li>
+                        <li class="submenu__item"><a href="pages/lab2.html" class="submenu__link">Лабораторна робота №2</a></li>
+                        <li class="submenu__item"><a href="pages/lab3.html" class="submenu__link">Лабораторна робота №3</a></li>
+                        <li class="submenu__item"><a href="pages/lab4.html" class="submenu__link">Лабораторна робота №4</a></li>
+                        <li class="submenu__item"><a href="pages/lab5.html" class="submenu__link">Лабораторна робота №5</a></li>
+                        <li class="submenu__item"><a href="pages/lab6.html" class="submenu__link">Лабораторна робота №6</a></li>
+                        <li class="submenu__item"><a href="pages/lab7.html" class="submenu__link">Лабораторна робота №7</a></li>
+                        <li class="submenu__item"><a href="pages/lab8.html" class="submenu__link">Лабораторна робота №8</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <section class="main">
+            <div class="intro">
+                <div class="intro__container">
+                    <p>київський національний університет ім. Тараса Шевченка</p>
+                    <p>факультет інформаційних технологій</p>
+                    <p>кафедра програмних систем та технологій</p>
+                    <p>Дисципліна</p>
+                    <h1>Функціональне програмування</h1>
+                    <p>Лабораторна робота №1</p>
+                    <p>"Використання рекурсії для організації повторювальних процесів"</p>
+                    <p>Варіант 15</p>
+                </div>
+                <div class="intro__name">
+                    <p>Виконав: Мухатасов Борис Євгенович</p>
+                    <p>Перевірила: Ніколаєнко Анастасія Юріївна </p>
+                </div>
+            </div>
+            <div class="zm">
+                <h2 class="heading">Зміст</h2>
+                <ul class="nav">
+                    <li class="nav__item"><a href="#meta" class="nav__link">Мета</a></li>
+                    <li class="nav__item"><a href="#task" class="nav__link">Умова задачі</a></li>
+                    <li class="nav__item"><a href="#structure" class="nav__link">Структура програми</a></li>
+                    <li class="nav__item"><a href="#ide" class="nav__link">Обгрунтування вибору середовища та мови функціонального програмування</a></li>
+                    <li class="nav__item"><a href="#code" class="nav__link">Код програми</a></li>
+                    <li class="nav__item"><a href="#links" class="nav__link">Посилання на проект з вихідним кодом</a></li>
+                    <li class="nav__item"><a href="#screen" class="nav__link">Скріншоти результатів</a></li>
+                    <li class="nav__item"><a href="#analys" class="nav__link">Аналіз достовірності результатів</a></li>
+                    <li class="nav__item"><a href="#so" class="nav__link">Висновки</a></li>
+                </ul>
+            </div>
+            <div class="lab">
+                <a id="meta"></a>
+                <h2 class="heading">Мета</h2>
+                <p class="text">Cформувати декларативне мислення в галузі програмування завдяки використанню чистих функцій, рекурсій замість циклів, запобіганню даних, що змінюються. Опанувати застосування рекурсивних функцій для обчислювальних процесів.</p>
+
+                <a id="task"></a>
+                <h2 class="heading">Умови задачі</h2>
+                <p class="text">Написати процедури, що обчислюють задану функцію за допомогою рекурсивного процесу. Продемонструвати застосування звичайної та хвостової рекурсії.</p>
+                <ul class="task">
+                    <li class="task__item">
+                        <p class="text">У речовій лотереї розігруються   m   предметів. Усього в урні   n   квитків. Виймається   k   квитків. Значення   m, n, k   вводять з клавіатури. Скількома способами квитки можна вийняти з урни так, щоб: а) рівно два з них були виграшними, б) принаймні два з них були виграшними? </p>
+                    </li>
+                    <li class="task__item">
+                        <p class="text">Монотонною послідовністю називається послідовність натуральних чисел, в якій кожне натуральне число   k   зустрічається рівно k раз: 1, 2, 2, 3, 3, 3, 4, 4, 4, 4 ... Ввести з клавіатури натуральне число   n. Використовуючи рекурсію, вивести перші   n   членів цієї послідовності. Контрольний тест: введено число 15, отриманий результат: 1 2 2 3 3 3 4 4 4 4 5 5 5 5 5.</p>
+                    </li>
+                </ul>
+
+                <a id="structure"></a>
+                <h2 class="heading">Структура програми</h2>
+                <div class="struct">
+                    <div class="struct__img-container"><img src="imgs/hippo_1.png" alt="hipo" class="struct__img"></div>
+                    <div class="struct__text">Рис. 1 - HIPO діаграма до завдання №1</div>
+                </div>
+                <div class="struct">
+                    <div class="struct__img-container"><img src="imgs/hippo_1.2.png" alt="hipo" class="struct__img"></div>
+                    <div class="struct__text">Рис. 2 - HIPO діаграма до завдання №2</div>
+                </div>
+
+                <a id="ide"></a>
+                <h2 class="heading">Обгрунтування вибору середовища та мови функціонального програмування</h2>
+                <p class="text">Була обрана мова програмування Scheme, так як вона має легкий, зрозумілий синтаксис, який поюснюють на лекціях, практичних, а також рекомендована лектором. IDE - DrRacket. Головною перевагою для вибору данного середовища розробки є зручність та відсутність потреби у мережі інтернет</p>
+
+
+                <a id="code"></a>
+                <h2 class="heading">Код програми</h2>
+                    <pre>
+                        ;Task1
+(display "15.1\n\n")
+(define m(read));кількість виграшних квитків
+(define n(read));загалом в урні
+(define k(read)); кількість квитків, що витягують
+
+(define (factorial num);зовнішня ф-я знаходження факторіала
+(define (fac num result); внутрішня ф-я факторіала
+  (if (= num 0);якщо число стає нулем то повертаємо результат
+       result
+      (fac (- num 1) (* num result))));якщо ні,то викликаємо нову ітерацію функції
+  (fac num 1)); виклик зовнівньої ф-ї
+
+
+(define (C a b);Знаходження числа комбінацій
+  (define tempA (factorial a));знаходимо факторіала та заносимо їх у тимчасові змінні
+  (define tempB (factorial b))
+  (define tempAB (factorial (- b a)))
+  (/ tempB (* tempA tempAB));обраховуємо по формулі
+  )
+
+;А)
+;знаходимо кількість способів вибору 2х двох виграшний білетів з загальної кількості виграшних білеів
+;знаходимо кількість способів вибору решти білетів з залишку білетів урни
+; перемножуємо значення
+(define result (* (C 2 m) (C (- k 2)(- n m))))
+(display "\n\nA) ")
+(display result)
+
+;Б)
+; Рішення полягає  у знаходженні добутків числа комбінацій з 
+потрібного числа виграшних білетів по загальну кількість виграшних 
+білетів та числа комбінацій з залишковим числом невиграшних білетів по к-ть усіх виграшних білетів
+;Знаходимо суму добутків
+(display "\nB) ")
+
+(define (taskB m n k)
+  (define (taskB_inside m n k res condition)
+    (if (> condition k)
+        res
+        (if (> condition m)
+            res
+    (taskB_inside m n k (+ (* (C condition m) (C (- k condition) (- n m))) res) (+ condition 1)))))
+  (taskB_inside m n k 0 2))
+
+(display (taskB m n k))
+  
+ 
+;Task2
+(display "\n\n15.2\n")
+(define count (read))
+(display "\n\n")
+
+(define (monoOutput num times);Фукнція виводу числа "num" "times" разів
+  (if (> times 0)
+      (begin
+         (display num)
+         (display " ")
+         (monoOutput num (- times 1)))))
+
+
+(define (out n)
+  (define (task2 n start_n times)
+    (if (< times n)
+        (begin
+          (if (<= (+ times start_n) n); condition
+              (monoOutput start_n start_n);if true
+              (monoOutput start_n (- n times))) ; if false
+          (task2 n (+ start_n 1) (+ times start_n)))))
+  (task2 n 1 0))
+
+(out count)
+                    </pre>
+                
+
+                <a id="links"></a>
+                <h2 class="heading">Посилання на проект з вихідним кодом</h2>
+                <a href="https://github.com/Mubor/Code-from-labworks" class="git">GitHub проект з вихідним кодом до всіх лабораторних</a>
+
+
+                <a id="screen"></a>
+                <h2 class="heading">Скріншоти результатів</h2>
+                <div class="struct">
+                    <div class="struct__img-container"><img src="imgs/res_1.png" alt="res" class="struct struct_img"></div>
+                    <div class="struct__text">Рис. 3 - Результат виконання завдання</div>
+                </div>
+
+                <a id="analys"></a>
+                <h2 class="heading">Аналіз достовірності результатів</h2>
+                <div class="text">
+                    <p class="text__item">
+                        Для першого завдання бачимо, що результати власного розрахунку співпадають з програмним результатом.
+                    </p>
+                    <p class="text__img">
+                        <img src="imgs/1_an.png" alt="res" class="res">
+                    </p>
+                    <p class="text__item">
+                        Для другого завдання видно, що програма виводить саме стільки елементів вибірки, скільки було вказано.
+                    </p>
+                </div>
+
+
+                <a id="so"></a>
+                <h2 class="heading">Висновки</h2>
+                <div class="text">В результаті роботи було вирішено два задання за допомогою мови Scheme. Використовувались звичайні та хвостові рекурсії. Було намальовано HIPO діаграми для кожного з завдань, проведено аналіз достовірності результатів, який показав що результати є вірними.</div>
+
+            </div>
+        </section>
+    </div>
+</body>
+</html>
